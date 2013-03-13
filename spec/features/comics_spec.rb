@@ -5,5 +5,6 @@ describe "Comics" do
     comic = FactoryGirl.create(:comic)
     visit comic_path(comic)
     page.should have_content(comic.name)
+    page.should have_content(comic.cover)
   end
 end

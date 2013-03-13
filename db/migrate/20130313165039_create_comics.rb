@@ -3,6 +3,7 @@ class CreateComics < ActiveRecord::Migration
     create_table :comics do |t|
       t.references :series
       t.integer :issue
+      t.integer :page_count
       t.string :name
 
       t.timestamps

@@ -8,6 +8,7 @@ FactoryGirl.define do
 
   factory :comic do
     series nil
+    page_count 10
     issue 1
     name { generate(:random_string) }
   end

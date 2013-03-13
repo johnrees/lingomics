@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20130313165039) do
   create_table "comics", :force => true do |t|
     t.integer  "series_id"
     t.integer  "issue"
+    t.integer  "page_count"
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
