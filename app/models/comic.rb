@@ -6,4 +6,7 @@ class Comic < ActiveRecord::Base
   def to_s
     name
   end
+
+  def cover
+  end
 end
