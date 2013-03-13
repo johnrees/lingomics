@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Comic do
 
   it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:languages) }
   it { should validate_presence_of(:page_count) }
   it { should belong_to(:series) }
 

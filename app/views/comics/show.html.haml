@@ -1,2 +1,6 @@
 = @comic
-= image_tag @comic.cover
+
+- @comic.pages.each do |page|
+  = image_tag page
+
+= @comic.languages

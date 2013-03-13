@@ -1,8 +1,9 @@
 class Comic < ActiveRecord::Base
 
   belongs_to :series
-  attr_accessible :issue, :name
-  validates_presence_of :name, :page_count
+  attr_accessible :issue, :name, :languages
+  validates_presence_of :name, :page_count, :languages
+  bitmask :languages, as: [:en, :es]
 
   def to_s
     name

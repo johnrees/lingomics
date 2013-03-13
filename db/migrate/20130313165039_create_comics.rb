@@ -4,6 +4,7 @@ class CreateComics < ActiveRecord::Migration
       t.references :series
       t.integer :issue
       t.integer :page_count
+      t.integer :languages
       t.string :name
 
       t.timestamps

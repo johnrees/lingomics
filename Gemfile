@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'dotenv'
 gem 'inherited_resources'
 gem 'omniauth-facebook'
+gem 'bitmask_attributes'
 
 # Gems used only for assets and not required
 # in production environments by default.
