@@ -45,6 +45,7 @@ module Lingomics
     config.generators do |g|
       g.fixture_replacement :factory_girl
       g.template_engine :haml
+      g.test_framework = :rspec
     end
 
     # Use SQL instead of Active Record's schema dumper when creating the database.

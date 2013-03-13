@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313154800) do
+ActiveRecord::Schema.define(:version => 20130313165039) do
+
+  create_table "comics", :force => true do |t|
+    t.integer  "series_id"
+    t.integer  "issue"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "comics", ["series_id"], :name => "index_comics_on_series_id"
 
   create_table "series", :force => true do |t|
     t.string   "name"

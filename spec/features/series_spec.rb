@@ -9,9 +9,11 @@ describe "Series" do
 
   it "has show page" do
     series = FactoryGirl.create(:series)
+    comic = FactoryGirl.create(:comic, series: series)
     visit root_path
     click_link series.name
     current_path.should eq(series_path(series))
     page.should have_content(series.name)
+    page.should have_content(comic.name)
   end
 end

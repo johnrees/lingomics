@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Series do
+describe Comic do
   it { should validate_presence_of(:name) }
-  it { should have_many(:comics) }
+  it { should belong_to(:series) }
 end
