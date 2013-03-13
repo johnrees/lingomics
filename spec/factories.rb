@@ -1,16 +1,16 @@
 FactoryGirl.define do
 
-  sequence(:random_string) {|n| "Series #{n}" }
+  # sequence(:random_string) {|n| "Series #{n}" }
 
   factory :series do
-    name { generate(:random_string) }
+    sequence(:name) { |n| "Series #{n}" }
   end
 
   factory :comic do
     series
     page_count 10
     issue 1
-    name { generate(:random_string) }
+    sequence(:name) { |n| "Comic #{n}" }
   end
 
 end
