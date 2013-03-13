@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +11,7 @@ gem 'dotenv'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'haml'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -25,6 +26,13 @@ gem 'jquery-rails'
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem "capybara"
+end
+
+group :test do
+  gem 'listen', '0.4.7'
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
 end
 
 # To use ActiveModel has_secure_password
