@@ -11,7 +11,7 @@ class Comic < ActiveRecord::Base
   def pages language = "en"
     _pages = []
     (0...page_count).each do |page_num|
-      _pages.push "/library/#{p id}/#{language}/#{p page_num}.jpg"
+      _pages.push "/library/#{Comic.pad id}/#{language}/#{Comic.pad page_num}.jpg"
     end
     return _pages
   end
@@ -20,9 +20,7 @@ class Comic < ActiveRecord::Base
     pages[0]
   end
 
-private
-
-  def p int
+  def self.pad int
     "%05d" % int
   end
 
