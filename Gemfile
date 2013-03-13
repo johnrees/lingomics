@@ -7,11 +7,12 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 gem 'dotenv'
+gem 'inherited_resources'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'haml'
+  gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -33,6 +34,7 @@ group :test do
   gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
+  gem 'shoulda-matchers'
 end
 
 # To use ActiveModel has_secure_password
