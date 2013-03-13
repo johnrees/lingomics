@@ -12,9 +12,10 @@ describe Comic do
   end
 
   it "should have pages" do
+    language = "en"
     comic = FactoryGirl.create(:comic, page_count: 10)
     comic.pages.length.should eq(10)
-    comic.pages.first.should eq("/library/#{comic.id}/0.jpg")
+    comic.pages.first.should eq("/library/#{comic.id}/#{language}/0.jpg")
   end
 
   it "should have languages"
