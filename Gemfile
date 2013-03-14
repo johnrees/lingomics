@@ -36,6 +36,7 @@ group :test do
   gem 'listen', '0.4.7'
   gem "guard-rspec"
   gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 # To use ActiveModel has_secure_password

@@ -11,7 +11,18 @@ require 'factory_girl'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
-OmniAuth.config.add_mock(:facebook, {:uid => '12345'})
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:facebook, {
+  uid: '12345',
+  provider: 'facebook',
+  info: {
+    name: 'John Rees',
+    nickname: 'kungpoo'
+  },
+  credentials: {
+    token: 'blahblah'
+  }
+})
 
 RSpec.configure do |config|
   # config.include Capybara::DSL
