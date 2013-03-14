@@ -1,0 +1,5 @@
+= "#{@user}'s Profile"
+
+%ul
+  - @user.bookmarks.each do |bookmark|
+    %li= link_to bookmark.comic, bookmark.comic
