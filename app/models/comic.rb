@@ -4,6 +4,8 @@ class Comic < ActiveRecord::Base
   attr_accessible :issue, :name, :languages, :page_count
   validates_presence_of :name, :page_count, :languages
   bitmask :languages, as: [:en, :es]
+  has_many :bookmarks
+  has_many :users, through: :bookmarks
 
   def to_s
     name

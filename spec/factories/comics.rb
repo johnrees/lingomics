@@ -1,11 +1,4 @@
 FactoryGirl.define do
-
-  # sequence(:random_string) {|n| "Series #{n}" }
-
-  factory :series do
-    sequence(:name) { |n| "Series #{n}" }
-  end
-
   factory :comic do
     series
     languages [:en]
@@ -13,5 +6,4 @@ FactoryGirl.define do
     issue 1
     sequence(:name) { |n| "Comic #{n}" }
   end
-
 end
